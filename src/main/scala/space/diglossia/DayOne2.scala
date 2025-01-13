@@ -1,6 +1,6 @@
 package space.diglossia
 
-import space.diglossia.utils.FileReader
+import utils.FileReader
 
 object DayOne2 {
 
@@ -20,6 +20,8 @@ object DayOne2 {
 
   val res  = scores.foldLeft(0)((acc, curr) => acc + curr._1 * curr._2)
 
-  @main def resultDayOne2 = println(res)
-
+  @main def resultDayOne2 = {
+    println(s"Solution = $res")
+    println("The correct answer was 21024792")
+  }
 }

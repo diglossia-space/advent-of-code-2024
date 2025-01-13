@@ -1,6 +1,6 @@
 package space.diglossia
 
-import space.diglossia.utils.FileReader
+import utils.FileReader
 
 
 object DayOne1 {
@@ -19,7 +19,10 @@ object DayOne1 {
 
   val res  = diffs.sum
 
-  @main def resultDayOne1 = println(res)
+  @main def resultDayOne1 ={
+    println(s"Solution = $res")
+    println("The correct answer was 1879048")
+  }
 
 }
 
