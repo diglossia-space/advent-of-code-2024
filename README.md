@@ -9,4 +9,4 @@ There is an `Object` representing my solution for each assignment and each `Obje
 There are two ways to run the solutions:
 
 1. Run `sbt run` and then enter the number corresponding to the solution when prompted.
-2. Run it directly by specifying the main-annotated method when starting `sbt`, like so `sbt "runMain space.diglossia.resultDayOne1"`
+2. Run it directly by specifying the main-annotated method when starting `sbt`, like so `sbt "runMain space.diglossia.resultDay01Part1"`

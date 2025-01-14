@@ -3,9 +3,9 @@ package space.diglossia
 import utils.FileReader
 
 
-object DayOne1 {
+object Day01Part1 {
 
-  val input  = FileReader.read("src/main/resources/input_1_1.txt")
+  val input  = FileReader.read("src/main/resources/input_1.txt")
 
   val (locations1, locations2) = input.split("\n").foldLeft((List.empty[Int], List.empty[Int])) { (acc, curr) =>
     val split = curr.split("""[\s]+""")
@@ -19,7 +19,7 @@ object DayOne1 {
 
   val res  = diffs.sum
 
-  @main def resultDayOne1 ={
+  @main def resultDay01Part1 ={
     println(s"Solution = $res")
     println("The correct answer was 1879048")
   }

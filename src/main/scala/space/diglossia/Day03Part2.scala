@@ -6,9 +6,9 @@ import scala.collection.mutable.ListBuffer
 import scala.util.matching.Regex
 
 
-object DayThree {
+object Day03Part2 {
 
-  val input  = FileReader.read("src/main/resources/input_3_1.txt")
+  val input  = FileReader.read("src/main/resources/input_3.txt")
 
   val mulPattern = """mul\((\d{1,3}),(\d{1,3})\)""".r.unanchored
   val switchPattern = """(don?'?t?\(\))""".r
@@ -43,7 +43,7 @@ object DayThree {
     }
   }
 
-    def switchOrMul(s: String): String = {
+  def switchOrMul(s: String): String = {
     val firstSwitch = switchPattern.findFirstMatchIn(s)
     val firstMul = mulPattern.findFirstMatchIn(s)
     (firstSwitch, firstMul) match {
@@ -79,7 +79,7 @@ object DayThree {
 
   val res = multipliers.map((a, b) => b * a).sum
 
-  @main def resultDayThree2 = {
+  @main def resultDay03Part2 = {
     val nothing = findAllEnabled(input)
     println(s"Found ${multipliers.length} enabled matches and switched ${switch.length} times")
     val res = multipliers.map((a, b) => b * a).sum

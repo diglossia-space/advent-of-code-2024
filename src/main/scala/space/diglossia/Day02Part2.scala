@@ -2,17 +2,16 @@ package space.diglossia
 
 import utils.FileReader
 
-import java.io.{File, FileWriter}
 import scala.collection.mutable.ListBuffer
 import scala.language.postfixOps
 
-object DayTwo2 {
+object Day02Part2 {
 
   // When can removing one level make it safe?
   // 1.  If gap too big, drop one Int and it works.
   // 2.  If one outlier in direction, drop one Int and it works
 
-  val input = FileReader.read("src/main/resources/input_2_1.txt")
+  val input = FileReader.read("src/main/resources/input_2.txt")
   val reports = input.split("\n").map(l => l.split("""[\s]+""").map(_.toInt))
 
   val isIncreasing: (Int) => Boolean = n => n > 0
@@ -47,7 +46,7 @@ object DayTwo2 {
     fixedIfSkip.head
   }
 
-  @main def resultDayTwo2 =
+  @main def resultDay02Part2 =
     val res = reports.map{r =>
       val safe = isReportSafe(r)
       val fixable =

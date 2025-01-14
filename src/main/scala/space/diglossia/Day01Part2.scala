@@ -2,9 +2,9 @@ package space.diglossia
 
 import utils.FileReader
 
-object DayOne2 {
+object Day01Part2 {
 
-  val input  = FileReader.read("src/main/resources/input_1_1.txt")
+  val input  = FileReader.read("src/main/resources/input_1.txt")
 
   val (locationsL, frequenciesR) =
     input.split("\n").foldLeft(List.empty[Int], Map.empty[Int, Int]) { (acc, curr) =>
@@ -20,7 +20,7 @@ object DayOne2 {
 
   val res  = scores.foldLeft(0)((acc, curr) => acc + curr._1 * curr._2)
 
-  @main def resultDayOne2 = {
+  @main def resultDay01Part2 = {
     println(s"Solution = $res")
     println("The correct answer was 21024792")
   }

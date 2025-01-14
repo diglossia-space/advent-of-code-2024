@@ -3,9 +3,9 @@ package space.diglossia
 import space.diglossia.utils.FileReader
 
 
-object DayThree1 {
+object Day03Part1 {
 
-  val input  = FileReader.read("src/main/resources/input_3_1.txt")
+  val input  = FileReader.read("src/main/resources/input_3.txt")
 
   val pattern = """mul\((\d{1,3}),(\d{1,3})\)""".r
 
@@ -16,7 +16,7 @@ object DayThree1 {
 
   val res = multipliers.map((a, b) => b * a).sum
 
-  @main def resultDayThree1 = {
+  @main def resultDay03Part1 = {
     println(s"Solution = $res")
     println("The correct answer was 165225049")
   }

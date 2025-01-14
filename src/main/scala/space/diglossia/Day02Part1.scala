@@ -3,9 +3,9 @@ package space.diglossia
 import utils.FileReader
 
 
-object DayTwo1 {
+object Day02Part1 {
 
-  val input  = FileReader.read("src/main/resources/input_2_1.txt")
+  val input  = FileReader.read("src/main/resources/input_2.txt")
 
   val isIncreasing: (Int, Int) => Boolean = (a, b) => b - a > 0
 
@@ -30,7 +30,7 @@ object DayTwo1 {
 
   def res = safetyReports.count(bools => !bools.contains(false))
 
-  @main def resultDayTwo1 = {
+  @main def resultDay02Part1 = {
     println(s"Solution = $res")
     println("The correct answer was 341")
   }
