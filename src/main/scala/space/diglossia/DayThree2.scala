@@ -32,6 +32,18 @@ object DayThree {
   }
 
   def walkThrough(s: String): String = {
+    if (!switch.head) {
+      val firstSwitch = switchPattern.findFirstMatchIn(s)
+      firstSwitch.map { switching =>
+        handleSwitch(switching)
+        s.substring(switching.end)
+      }.getOrElse("")
+    } else {
+      switchOrMul(s)
+    }
+  }
+
+    def switchOrMul(s: String): String = {
     val firstSwitch = switchPattern.findFirstMatchIn(s)
     val firstMul = mulPattern.findFirstMatchIn(s)
     (firstSwitch, firstMul) match {
